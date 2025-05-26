@@ -9,12 +9,7 @@ const Stack = createNativeStackNavigator();
 
 function RootStack() {
   return (
-    <Stack.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        headerStyle: { backgroundColor: 'tomato' },
-      }}
-    >
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Details" component={DetailsScreen} />
     </Stack.Navigator>
