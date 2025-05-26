@@ -12,7 +12,7 @@ export function HomeScreen({message = "Home Screen"}: HomeScreenProps) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>{message}</Text>
-      <Button onPress={() => navigation.push('Details')}>Go to Details</Button>
+      <Button onPress={() => navigation.push('Details', {depth: 1})}>Go to Details</Button>
     </View>
   );
 }
