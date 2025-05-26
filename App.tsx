@@ -10,8 +10,16 @@ const Stack = createNativeStackNavigator();
 function RootStack() {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        initialParams={{ message: 'Hello World' }}
+      />
+      <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
+        initialParams={{ depth: 1 }}
+      />
     </Stack.Navigator>
   );
 }
