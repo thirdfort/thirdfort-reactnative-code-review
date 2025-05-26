@@ -15,6 +15,7 @@ export function DetailsScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>You are currently {depth} screens deep</Text>
+      <Button onPress={() => navigation.setParams({depth: (depth + 1)})}>Increment Depth</Button>
       <Button onPress={() => navigation.push('Details', {depth: (depth + 1)})}>Go Deeper</Button>
       <Button onPress={() => navigation.goBack('Details')}>Go Back</Button>
       <Button onPress={() => navigation.popTo('Home')}>Go Home</Button>
