@@ -11,7 +11,9 @@ export function DetailsScreen({message = "Details Screen"}: DetailsScreenProps) 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>{message}</Text>
-      <Button onPress={() => navigation.navigate('Home')}>Go Home</Button>
+      <Button onPress={() => navigation.push('Details')}>Go Deeper</Button>
+      <Button onPress={() => navigation.goBack('Details')}>Go Back</Button>
+      <Button onPress={() => navigation.popTo('Home')}>Go Home</Button>
     </View>
   );
 }
