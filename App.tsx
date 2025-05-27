@@ -14,11 +14,13 @@ function RootStack() {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
+        options={{headerShown: false}}
         initialParams={{ message: 'Hello World' }}
       />
       <Stack.Screen
         name="About"
         component={AboutScreen}
+        options={{headerShown: false}}
         initialParams={{ depth: 1 }}
       />
     </Stack.Navigator>
