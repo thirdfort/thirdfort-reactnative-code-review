@@ -13,21 +13,27 @@ export function HomeScreen() {
   const { message } = route.params as HomeScreenProps;
   
   return (
-    <View style={styles.container}>
-      <Text>{message}</Text>
-      <Button style={styles.bottom} onPress={() => navigation.push('About')}>Go to Details</Button>
-    </View>
+    <>
+      <View style={styles.container}>
+        <Text>{message}</Text>
+      </View>
+      <View style={styles.footer}>
+          <Button onPress={() => navigation.push('About')}>About</Button>
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
+    gap: '2',
     justifyContent: 'center',
   },
-  bottom: {
-    alignSelf: 'flex-end',
+  footer: {
+    alignItems: 'center',
+    paddingBottom: 10,
   }
 });
