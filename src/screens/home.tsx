@@ -11,6 +11,10 @@ export function HomeScreen() {
   const route = useRoute();
 
   const { message } = route.params as HomeScreenProps;
+
+  const handleGoToAbout = () => {
+    navigation.navigate('About');
+  };
   
   return (
     <>
@@ -18,7 +22,7 @@ export function HomeScreen() {
         <Text>{message}</Text>
       </View>
       <View style={styles.footer}>
-          <Button onPress={() => navigation.push('About')}>About</Button>
+          <Button onPress={handleGoToAbout}>About</Button>
       </View>
     </>
   );

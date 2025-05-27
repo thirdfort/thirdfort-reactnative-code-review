@@ -3,14 +3,14 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Button } from '@react-navigation/elements';
 
 export type AboutScreenProps = {
-  depth: number;
 };
 
 export function AboutScreen() {
   const navigation = useNavigation();
-  const route = useRoute();
 
-  const { depth } = route.params as AboutScreenProps;
+  const handleGoHome = () => {
+    navigation.popTo('Home');
+  };
 
   return (
     <>
@@ -20,7 +20,7 @@ export function AboutScreen() {
         <Text>© 2025 ACME Industries LTD</Text>
       </View>
       <View style={styles.footer}>
-        <Button onPress={() => navigation.popTo('Home')}>Back</Button>
+        <Button onPress={handleGoHome}>Home</Button>
       </View>
     </>
   );
